@@ -1,6 +1,6 @@
 {
   "name": "@castrocrea/moon",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Moon basic package",
   "main": "./src/index.ts",
   "repository": {
@@ -9,6 +9,7 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
+    "pub": "yarn build && yarn publish",
     "build": "tsc",     
     "prebuild": "rm -rf build"
   },

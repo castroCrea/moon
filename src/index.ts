@@ -50,7 +50,7 @@ export class MoonPlugin {
    * 
    * @param settings - The settings of the plugin
    */
-  constructor(props: { settings: MoonPluginSettings }) {
+  constructor(props?: { settings: MoonPluginSettings }) {
     if (!props) return;
     this.settings = props.settings;
   }
