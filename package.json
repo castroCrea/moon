@@ -1,8 +1,12 @@
 {
   "name": "@castrocrea/moon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Moon basic package",
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castroCrea/moon"
+  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",     
