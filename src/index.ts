@@ -9,7 +9,7 @@ export type PluginSettingsDescription = Record<string, {
   description: string;
 }>;
 
-export interface MoonPluginSettings {}
+export type MoonPluginSettings = Record<string, string>;
 
 export class MoonPlugin {
   /**
@@ -40,10 +40,7 @@ export class MoonPlugin {
   /**
    * settings - The settings of the plugin
    */
-  settings: MoonPluginSettings = {
-    token: '',
-    databaseId: '',
-  };
+  settings: MoonPluginSettings = {};
 
   /**
    * constructor - Create a new instance of the plugin

@@ -6,8 +6,7 @@ export type PluginSettingsDescription = Record<string, {
     label: string;
     description: string;
 }>;
-export interface MoonPluginSettings {
-}
+export type MoonPluginSettings = Record<string, string>;
 export declare class MoonPlugin {
     /**
      * name - The name of the plugin

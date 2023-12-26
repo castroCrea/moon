@@ -48,10 +48,7 @@ class MoonPlugin {
         /**
          * settings - The settings of the plugin
          */
-        this.settings = {
-            token: '',
-            databaseId: '',
-        };
+        this.settings = {};
         if (!props)
             return;
         this.settings = props.settings;
