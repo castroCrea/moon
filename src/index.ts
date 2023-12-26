@@ -1,4 +1,4 @@
-import { Context } from 'FetchContext.type';
+import { Context } from './FetchContext.type';
 
 export * from './FetchContext.type'
 
