@@ -1,9 +1,22 @@
 {
   "name": "moon",
-  "version": "1.0.0",
-  "main": "./src/index.ts",
+  "version": "0.1.0",
+  "description": "Moon basic package",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",     
+    "prebuild": "rm -rf build"
+  },
+  "keywords": ["keyword1", "keyword2"],
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "typescript": "^4.4.3"
+  }, 
+  "publishConfig": {
+    "@castroCrea:registry": "https://npm.pkg.github.com"
   }
 }
