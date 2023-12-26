@@ -13,7 +13,10 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": "build"
+    "outDir": "dist",
+    "rootDir": "./src",
+    "declaration": true,
   },
+  "include": ["src/**/*.ts"],
   "exclude": ["test"]
 }
