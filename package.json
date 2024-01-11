@@ -1,6 +1,6 @@
 {
   "name": "@castrocrea/moon",
-  "version": "0.1.19",
+  "version": "0.1.21",
   "description": "Moon basic package",
   "main": "./dist",
   "repository": {
@@ -11,7 +11,7 @@
   "scripts": {
     "pub": "yarn build && yarn publish",
     "build": "tsc",
-    "prebuild": "rm -rf build",
+    "prebuild": "rm -rf dist",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [
