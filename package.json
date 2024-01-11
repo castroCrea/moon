@@ -11,8 +11,8 @@
   "scripts": {
     "pub": "yarn build && yarn publish",
     "build": "tsc",
-    "lint": "eslint .",
-    "prebuild": "rm -rf build"
+    "prebuild": "rm -rf build",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [
     "keyword1",
