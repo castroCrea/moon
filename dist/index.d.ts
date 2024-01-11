@@ -9,6 +9,15 @@ export type PluginSettingsDescription = Record<string, {
     description: string;
 }>;
 export type MoonPluginSettings = Record<string, string>;
+export interface PluginHelpers {
+    fs: any;
+    path: any;
+    htmlToMarkdown: HtmlToMarkdown;
+}
+export interface MoonPluginConstructorProps<T extends MoonPluginSettings> {
+    settings?: T;
+    helpers: PluginHelpers;
+}
 export declare class MoonPlugin {
     /**
      * name - The name of the plugin
@@ -37,13 +46,15 @@ export declare class MoonPlugin {
      */
     settings: MoonPluginSettings;
     /**
+     * All helpers you need to build your plugin
+     */
+    helpers: PluginHelpers | undefined;
+    /**
      * constructor - Create a new instance of the plugin
      *
      * @param settings - The settings of the plugin
      */
-    constructor(props?: {
-        settings?: MoonPluginSettings;
-    });
+    constructor(props?: MoonPluginConstructorProps<MoonPluginSettings>);
     /**
      * saveSettings - Save the settings to the plugin's settings file
      *
@@ -65,8 +76,10 @@ export declare class MoonPlugin {
      * This will be called on output
      */
     integration(props: {
+        html: string;
         markdown: string;
-        htmlToMarkdown: HtmlToMarkdown;
+        vaultPath: string;
+        context: Context;
     }): Promise<boolean>;
     /**
      * If you want to add a new context, you can add it here

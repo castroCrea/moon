@@ -1,5 +1,7 @@
 import { type Context } from './FetchContext.type'
 import { type HtmlToMarkdown } from './Fn.type'
+// import type fs from 'fs'
+// import type path from 'path'
 
 export * from './FetchContext.type'
 export * from './Fn.type'
@@ -12,6 +14,17 @@ export type PluginSettingsDescription = Record<string, {
 }>
 
 export type MoonPluginSettings = Record<string, string>
+
+export interface PluginHelpers {
+  fs: any
+  path: any
+  htmlToMarkdown: HtmlToMarkdown
+}
+
+export interface MoonPluginConstructorProps<T extends MoonPluginSettings> {
+  settings?: T
+  helpers: PluginHelpers
+}
 
 export class MoonPlugin {
   /**
@@ -45,13 +58,19 @@ export class MoonPlugin {
   settings: MoonPluginSettings = {}
 
   /**
+   * All helpers you need to build your plugin
+   */
+  helpers: PluginHelpers | undefined
+
+  /**
    * constructor - Create a new instance of the plugin
    *
    * @param settings - The settings of the plugin
    */
-  constructor (props?: { settings?: MoonPluginSettings }) {
+  constructor (props?: MoonPluginConstructorProps<MoonPluginSettings>) {
     if (props == null) return
     if (props.settings) this.settings = props.settings
+    this.helpers = props.helpers
   }
 
   /**
@@ -79,8 +98,10 @@ export class MoonPlugin {
    * This will be called on output
    */
   async integration (props: {
+    html: string
     markdown: string
-    htmlToMarkdown: HtmlToMarkdown
+    vaultPath: string
+    context: Context
   }): Promise<boolean> {
     console.log('MoonPlugin integration')
     return false
