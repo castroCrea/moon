@@ -6,7 +6,7 @@ export type SOURCE_TYPE = [
   'Message',
   'TikTok',
   'Youtube',
-];
+]
 
 export type SOURCE_TYPE_THAT_CLIP = [
   'LinkedIn - DM',
@@ -23,7 +23,6 @@ export type SOURCE_TYPE_THAT_CLIP = [
   'Newsletter',
   'Mail',
 ]
-
 
 /**
  * Create:
@@ -52,71 +51,71 @@ export type SOURCE_TYPE_THAT_CLIP = [
  */
 export interface Context {
   people: Array<{
-    name: string;
-    picture?: string;
-    job?: string;
-    email?: string;
-    about?: string;
-    linkedin?: string[];
-    twitter?: string[];
-    tiktok?: string[];
-    instagram?: string[];
-    substack?: string[];
-    github?: string[];
-    mastodon?: string[];
-    youtube?: string[];
-    website?: string[];
-    names?: string[];
-    anchor?: string;
-  }>;
-  keywords: Topics;
+    name: string
+    picture?: string
+    job?: string
+    email?: string
+    about?: string
+    linkedin?: string[]
+    twitter?: string[]
+    tiktok?: string[]
+    instagram?: string[]
+    substack?: string[]
+    github?: string[]
+    mastodon?: string[]
+    youtube?: string[]
+    website?: string[]
+    names?: string[]
+    anchor?: string
+  }>
+  keywords: Topics
   source: {
-    title?: string;
-    url?: string;
-    canonical?: string;
-    image?: string;
-    description?: string;
-    content?: string;
-    published?: string;
+    title?: string
+    url?: string
+    canonical?: string
+    image?: string
+    description?: string
+    content?: string
+    published?: string
     timestamp?: Array<{
-      timestamp?: string;
-      url?: string;
-    }>;
-    appName?: string; // can be many
-    type?: SOURCE_TYPE_THAT_CLIP | SOURCE_TYPE | string; // can be many
-    dmContent?: Array<{ content?: string; published?: string }>;
-    ttr?: number;
-    text?: string;
-    icon?: string;
-    price?: string;
-    rating?: string;
-    recipeIngredient?: string[] | string;
-    recipeInstructions?: string[] | string;
-    startDate?: string;
-    endDate?: string;
-    location?: string;
-  };
+      timestamp?: string
+      url?: string
+    }>
+    appName?: string // can be many
+    type?: SOURCE_TYPE_THAT_CLIP | SOURCE_TYPE | string // can be many
+    dmContent?: Array<{ content?: string, published?: string }>
+    ttr?: number
+    text?: string
+    icon?: string
+    price?: string
+    rating?: string
+    recipeIngredient?: string[] | string
+    recipeInstructions?: string[] | string
+    startDate?: string
+    endDate?: string
+    location?: string
+  }
   other?: {
-    duration?: number;
-    creationDate?: string;
-    aiTitle?: string;
-  };
-  isFinished?: boolean;
-  error?: string;
-  clipContent?: boolean;
+    duration?: number
+    creationDate?: string
+    aiTitle?: string
+  }
+  isFinished?: boolean
+  error?: string
+  clipContent?: boolean
 }
 
 export interface Topics {
-  subject: string[];
-  collections: string[];
-  organizations: string[];
-  places: string[];
-  people: string[];
-  hashTags: string[];
-  emails: string[];
-  atMentions: string[];
-  urls: string[];
-  phoneNumbers: string[];
-  acronyms: string[];
-  quotations: string[];
+  subject: string[]
+  collections: string[]
+  organizations: string[]
+  places: string[]
+  people: string[]
+  hashTags: string[]
+  emails: string[]
+  atMentions: string[]
+  urls: string[]
+  phoneNumbers: string[]
+  acronyms: string[]
+  quotations: string[]
 }

@@ -1,6 +1,8 @@
 import { type Context } from './FetchContext.type'
+import { type HtmlToMarkdown } from './Fn.type'
 
 export * from './FetchContext.type'
+export * from './Fn.type'
 
 export type PluginSettingsDescription = Record<string, {
   type: 'string' | 'path'
@@ -76,7 +78,10 @@ export class MoonPlugin {
    *
    * This will be called on output
    */
-  async integration (props: { markdown: string }): Promise<boolean> {
+  async integration (props: {
+    markdown: string
+    htmlToMarkdown: HtmlToMarkdown
+  }): Promise<boolean> {
     console.log('MoonPlugin integration')
     return false
   }

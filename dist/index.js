@@ -16,6 +16,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MoonPlugin = void 0;
 __exportStar(require("./FetchContext.type"), exports);
+__exportStar(require("./Fn.type"), exports);
 class MoonPlugin {
     /**
      * constructor - Create a new instance of the plugin

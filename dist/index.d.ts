@@ -1,5 +1,7 @@
 import { type Context } from './FetchContext.type';
+import { type HtmlToMarkdown } from './Fn.type';
 export * from './FetchContext.type';
+export * from './Fn.type';
 export type PluginSettingsDescription = Record<string, {
     type: 'string' | 'path';
     required: boolean;
@@ -64,6 +66,7 @@ export declare class MoonPlugin {
      */
     integration(props: {
         markdown: string;
+        htmlToMarkdown: HtmlToMarkdown;
     }): Promise<boolean>;
     /**
      * If you want to add a new context, you can add it here
