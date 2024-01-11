@@ -52,7 +52,8 @@ class MoonPlugin {
         this.settings = {};
         if (props == null)
             return;
-        this.settings = props.settings;
+        if (props.settings)
+            this.settings = props.settings;
     }
     /**
      * saveSettings - Save the settings to the plugin's settings file

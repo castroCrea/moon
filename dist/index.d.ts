@@ -42,7 +42,7 @@ export declare class MoonPlugin {
      * @param settings - The settings of the plugin
      */
     constructor(props?: {
-        settings: MoonPluginSettings;
+        settings?: MoonPluginSettings;
     });
     /**
      * saveSettings - Save the settings to the plugin's settings file
