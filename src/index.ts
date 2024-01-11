@@ -100,7 +100,6 @@ export class MoonPlugin {
   async integration (props: {
     html: string
     markdown: string
-    vaultPath: string
     context: Context
   }): Promise<boolean> {
     console.log('MoonPlugin integration')

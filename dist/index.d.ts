@@ -78,7 +78,6 @@ export declare class MoonPlugin {
     integration(props: {
         html: string;
         markdown: string;
-        vaultPath: string;
         context: Context;
     }): Promise<boolean>;
     /**
