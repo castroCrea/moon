@@ -49,7 +49,7 @@ class MoonPlugin {
          * settings - The settings of the plugin
          */
         this.settings = {};
-        if (!props)
+        if (props == null)
             return;
         this.settings = props.settings;
     }
@@ -72,6 +72,7 @@ class MoonPlugin {
      */
     async integration(props) {
         console.log('MoonPlugin integration');
+        return false;
     }
     /**
      * If you want to add a new context, you can add it here

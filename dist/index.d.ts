@@ -1,7 +1,7 @@
-import { Context } from './FetchContext.type';
+import { type Context } from './FetchContext.type';
 export * from './FetchContext.type';
 export type PluginSettingsDescription = Record<string, {
-    type: 'string' | 'path';
+    type: 'string' | 'path';
     required: boolean;
     label: string;
     description: string;
@@ -64,7 +64,7 @@ export declare class MoonPlugin {
      */
     integration(props: {
         markdown: string;
-    }): Promise<void>;
+    }): Promise<boolean>;
     /**
      * If you want to add a new context, you can add it here
      *

@@ -3,7 +3,7 @@ import { type Context } from './FetchContext.type'
 export * from './FetchContext.type'
 
 export type PluginSettingsDescription = Record<string, {
-  type: 'string'
+  type: 'string' | 'path'
   required: boolean
   label: string
   description: string
