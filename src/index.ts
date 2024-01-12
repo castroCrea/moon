@@ -74,37 +74,15 @@ export class MoonPlugin {
   }
 
   /**
-   * saveSettings - Save the settings to the plugin's settings file
-   *
-   * @param settings
-   * @param writeSettings
-   *        @param settings
-   *        @param settingsFileName - The name with no extension, by default will take the name of the plugin from settings
-   */
-  async saveSettings ({ settings, writeSettings }: {
-    settings: MoonPluginSettings
-    writeSettings: <MoonPluginSettings>({ settings, settingsFileName }: {
-      settings: MoonPluginSettings
-      settingsFileName: string
-    }) => void
-  }): Promise<void> {
-    writeSettings({ settings, settingsFileName: this.name })
-    this.settings = settings
-  }
-
-  /**
    * If you want to add a new integration, you can add it here
-   *
-   * This will be called on output
-   */
-  async integration (props: {
+  *
+  * This will be called on output
+  */
+  integration: undefined | ((props: {
     html: string
     markdown: string
     context: Context
-  }): Promise<boolean> {
-    console.log('MoonPlugin integration')
-    return false
-  }
+  }) => Promise<boolean>)
 
   /**
    * If you want to add a new context, you can add it here
@@ -113,8 +91,5 @@ export class MoonPlugin {
    *
    * @return Context
    */
-  async context (): Promise<Partial<Context>> {
-    console.log('MoonPlugin integration')
-    return { people: [], source: {} }
-  }
+  context: undefined | (() => Promise<Partial<Context>>)
 }

@@ -56,30 +56,15 @@ export declare class MoonPlugin {
      */
     constructor(props?: MoonPluginConstructorProps<MoonPluginSettings>);
     /**
-     * saveSettings - Save the settings to the plugin's settings file
-     *
-     * @param settings
-     * @param writeSettings
-     *        @param settings
-     *        @param settingsFileName - The name with no extension, by default will take the name of the plugin from settings
-     */
-    saveSettings({ settings, writeSettings }: {
-        settings: MoonPluginSettings;
-        writeSettings: <MoonPluginSettings>({ settings, settingsFileName }: {
-            settings: MoonPluginSettings;
-            settingsFileName: string;
-        }) => void;
-    }): Promise<void>;
-    /**
      * If you want to add a new integration, you can add it here
-     *
-     * This will be called on output
-     */
-    integration(props: {
+    *
+    * This will be called on output
+    */
+    integration: undefined | ((props: {
         html: string;
         markdown: string;
         context: Context;
-    }): Promise<boolean>;
+    }) => Promise<boolean>);
     /**
      * If you want to add a new context, you can add it here
      *
@@ -87,5 +72,5 @@ export declare class MoonPlugin {
      *
      * @return Context
      */
-    context(): Promise<Partial<Context>>;
+    context: undefined | (() => Promise<Partial<Context>>);
 }

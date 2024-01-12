@@ -58,38 +58,6 @@ class MoonPlugin {
             this.settings = props.settings;
         this.helpers = props.helpers;
     }
-    /**
-     * saveSettings - Save the settings to the plugin's settings file
-     *
-     * @param settings
-     * @param writeSettings
-     *        @param settings
-     *        @param settingsFileName - The name with no extension, by default will take the name of the plugin from settings
-     */
-    async saveSettings({ settings, writeSettings }) {
-        writeSettings({ settings, settingsFileName: this.name });
-        this.settings = settings;
-    }
-    /**
-     * If you want to add a new integration, you can add it here
-     *
-     * This will be called on output
-     */
-    async integration(props) {
-        console.log('MoonPlugin integration');
-        return false;
-    }
-    /**
-     * If you want to add a new context, you can add it here
-     *
-     * This will be called on input and added to context
-     *
-     * @return Context
-     */
-    async context() {
-        console.log('MoonPlugin integration');
-        return { people: [], source: {} };
-    }
 }
 exports.MoonPlugin = MoonPlugin;
 //# sourceMappingURL=index.js.map
