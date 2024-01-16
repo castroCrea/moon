@@ -18,6 +18,24 @@ export interface MoonPluginConstructorProps<T extends MoonPluginSettings> {
     settings?: T;
     helpers: PluginHelpers;
 }
+export interface NpmRegistryAuthToken {
+    token: string;
+}
+export interface NpmRegistryAuthBasic {
+    username: string;
+    password: string;
+}
+export interface NpmRegistryConfig {
+    auth?: NpmRegistryAuthToken | NpmRegistryAuthBasic;
+    userAgent?: string;
+}
+export interface PluginManagerCredentials {
+    packageName: string;
+    fromPath?: boolean;
+    npmRegistryUrl: string;
+    npmRegistryConfig: NpmRegistryConfig;
+}
+export type PluginsManages = PluginManagerCredentials[];
 export declare class MoonPlugin {
     /**
      * name - The name of the plugin

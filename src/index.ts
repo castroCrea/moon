@@ -26,6 +26,28 @@ export interface MoonPluginConstructorProps<T extends MoonPluginSettings> {
   helpers: PluginHelpers
 }
 
+export interface NpmRegistryAuthToken {
+  token: string
+}
+export interface NpmRegistryAuthBasic {
+  username: string
+  password: string
+}
+
+export interface NpmRegistryConfig {
+  auth?: NpmRegistryAuthToken | NpmRegistryAuthBasic
+  userAgent?: string
+}
+
+export interface PluginManagerCredentials {
+  packageName: string // '@castrocrea/moon-obsidian-plugin'
+  fromPath?: boolean // use installFromPath
+  npmRegistryUrl: string
+  npmRegistryConfig: NpmRegistryConfig
+}
+
+export type PluginsManages = PluginManagerCredentials[]
+
 export class MoonPlugin {
   /**
    * name - The name of the plugin
