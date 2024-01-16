@@ -41,6 +41,7 @@ export interface NpmRegistryConfig {
 
 export interface PluginManagerCredentials {
   packageName: string // '@castrocrea/moon-obsidian-plugin'
+  description?: string;
   fromPath?: boolean // use installFromPath
   npmRegistryUrl: string
   npmRegistryConfig: NpmRegistryConfig
