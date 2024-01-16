@@ -30,6 +30,7 @@ export interface NpmRegistryConfig {
     userAgent?: string;
 }
 export interface PluginManagerCredentials {
+    id: number;
     packageName: string;
     description?: string;
     fromPath?: boolean;
