@@ -34,6 +34,7 @@ export interface PluginManagerCredentials {
     packageName: string;
     description?: string;
     fromPath?: boolean;
+    devMode?: boolean;
     npmRegistryUrl: string;
     npmRegistryConfig: NpmRegistryConfig;
 }

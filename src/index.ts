@@ -44,6 +44,7 @@ export interface PluginManagerCredentials {
   packageName: string // '@castrocrea/moon-obsidian-plugin'
   description?: string
   fromPath?: boolean // use installFromPath
+  devMode?: boolean // use to auto refresh when developing a plugin
   npmRegistryUrl: string
   npmRegistryConfig: NpmRegistryConfig
 }
