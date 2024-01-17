@@ -7,7 +7,7 @@ export * from './FetchContext.type'
 export * from './Fn.type'
 
 export type PluginSettingsDescription = Record<string, {
-  type: 'string' | 'path' | 'boolean'
+  type: 'string' | 'path' | 'boolean' | 'number'
   required: boolean
   label: string
   description: string
