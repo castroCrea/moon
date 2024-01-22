@@ -117,5 +117,5 @@ export class MoonPlugin {
    *
    * @return Context
    */
-  context: undefined | (() => Promise<Partial<Context>>)
+  context: undefined | ((context: Context) => Promise<Context>)
 }
