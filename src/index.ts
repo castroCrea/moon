@@ -5,6 +5,7 @@ import { type HtmlToMarkdown } from './Fn.type'
 
 export * from './FetchContext.type'
 export * from './Fn.type'
+export * from './params'
 
 export type PluginSettingsDescription = Record<string, {
   type: 'string' | 'path' | 'boolean' | 'number'
