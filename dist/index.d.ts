@@ -96,7 +96,8 @@ export declare class MoonPlugin {
      * @return Context
      */
     context: undefined | ((props: {
-        text: string;
+        text: string | undefined;
+        html: string | undefined;
         context: Context;
     }) => Promise<Context>);
 }
