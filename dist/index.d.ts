@@ -11,8 +11,6 @@ export type PluginSettingsDescription = Record<string, {
 }>;
 export type MoonPluginSettings = Record<string, string>;
 export interface PluginHelpers {
-    fs: any;
-    path: any;
     moonLog: (log: string) => void;
     htmlToMarkdown: HtmlToMarkdown;
 }
