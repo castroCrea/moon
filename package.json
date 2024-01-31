@@ -1,6 +1,6 @@
 {
   "name": "@castrocrea/moon",
-  "version": "0.1.39",
+  "version": "0.1.40",
   "description": "Moon basic package",
   "main": "./dist",
   "repository": {
