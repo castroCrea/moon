@@ -20,6 +20,7 @@ exports.MoonPlugin = void 0;
 __exportStar(require("./FetchContext.type"), exports);
 __exportStar(require("./Fn.type"), exports);
 __exportStar(require("./params"), exports);
+__exportStar(require("./types"), exports);
 class MoonPlugin {
     /**
      * constructor - Create a new instance of the plugin

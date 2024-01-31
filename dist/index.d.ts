@@ -1,8 +1,10 @@
 import { type Context } from './FetchContext.type';
 import { type HtmlToMarkdown } from './Fn.type';
+import { PluginMentionItem } from './types';
 export * from './FetchContext.type';
 export * from './Fn.type';
 export * from './params';
+export * from './types';
 export type PluginSettingsDescription = Record<string, {
     type: 'string' | 'path' | 'boolean' | 'number';
     required: boolean;
@@ -100,20 +102,5 @@ export declare class MoonPlugin {
     /**
      * Add a mention to the text editor and execute a command on action
      */
-    mention: undefined | (() => Promise<Array<{
-        name: string;
-        char: string;
-        htmlClass: string;
-        allowSpaces: boolean;
-        getListItem: () => string[];
-        onSelectItem: ({ item, addMention, editor }: {
-            item: string;
-            addMention: (item: string) => void;
-            editor: {
-                commands: {
-                    setContent: (content: string) => boolean;
-                };
-            };
-        }) => void;
-    }>>);
+    mention: undefined | (() => Promise<PluginMentionItem[]>);
 }
