@@ -126,5 +126,5 @@ export class MoonPlugin {
   /**
    * Add a mention to the text editor and execute a command on action
    */
-  mention: undefined | (() => Promise<PluginMentionItem[]>)
+  mention: undefined | (() => PluginMentionItem[])
 }
