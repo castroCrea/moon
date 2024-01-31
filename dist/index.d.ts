@@ -78,9 +78,9 @@ export declare class MoonPlugin {
     constructor(props?: MoonPluginConstructorProps<MoonPluginSettings>);
     /**
      * If you want to add a new integration, you can add it here
-    *
-    * This will be called on output
-    */
+     *
+     * This will be called on output
+     */
     integration: undefined | ((props: {
         html: string;
         markdown: string;
@@ -97,4 +97,23 @@ export declare class MoonPlugin {
         html: string | undefined;
         context: Context;
     }) => Promise<Context>);
+    /**
+     * Add a mention to the text editor and execute a command on action
+     */
+    mention: undefined | (() => Promise<Array<{
+        name: string;
+        char: string;
+        htmlClass: string;
+        allowSpaces: boolean;
+        getListItem: () => string[];
+        onSelectItem: ({ item, addMention, editor }: {
+            item: string;
+            addMention: (item: string) => void;
+            editor: {
+                commands: {
+                    setContent: (content: string) => boolean;
+                };
+            };
+        }) => void;
+    }>>);
 }
