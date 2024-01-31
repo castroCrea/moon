@@ -5,7 +5,7 @@ export interface PluginMentionItem {
     allowSpaces: boolean;
     getListItem: ({ query }: {
         query: string;
-    }) => Promise<string[]>;
+    }) => string[];
     onSelectItem: ({ item, addMention, editor }: {
         item: string;
         addMention: (item: string) => void;
