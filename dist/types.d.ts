@@ -1,4 +1,7 @@
 import { type Context } from './FetchContext.type';
+export type MentionItem = {
+    title: string;
+} & Record<string, unknown>;
 export interface PluginMentionItem {
     name: string;
     char: string;
@@ -6,14 +9,12 @@ export interface PluginMentionItem {
     allowSpaces: boolean;
     getListItem: ({ query }: {
         query: string;
-    }) => Array<{
-        title: string;
-    } & Record<string, unknown>>;
+    }) => MentionItem[];
     onSelectItem: (props: {
-        item: string;
+        item: MentionItem;
         setContext: (context: Context) => void;
         context: Context;
-        addMention: (item: string) => void;
+        addMention: (text: string) => void;
         editor: {
             commands: {
                 setContent: (content: string) => boolean;
