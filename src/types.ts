@@ -8,7 +8,7 @@ export interface PluginMentionItem {
   getListItem: ({ query }: {
     query: string
   }) => Array<{ title: string } & Record<string, unknown>>
-  onSelectItem: ({ item, addMention, editor }: {
+  onSelectItem: (props: {
     item: string
     setContext: (context: Context) => void
     context: Context
