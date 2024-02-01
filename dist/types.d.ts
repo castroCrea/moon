@@ -1,3 +1,4 @@
+import { type Context } from './FetchContext.type';
 export interface PluginMentionItem {
     name: string;
     char: string;
@@ -8,6 +9,8 @@ export interface PluginMentionItem {
     }) => string[];
     onSelectItem: ({ item, addMention, editor }: {
         item: string;
+        setContext: (context: Context) => void;
+        context: Context;
         addMention: (item: string) => void;
         editor: {
             commands: {

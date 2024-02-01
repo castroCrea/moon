@@ -1,6 +1,6 @@
 import { type Context } from './FetchContext.type';
 import { type HtmlToMarkdown } from './Fn.type';
-import { PluginMentionItem } from './types';
+import { type PluginMentionItem } from './types';
 export * from './FetchContext.type';
 export * from './Fn.type';
 export * from './params';
