@@ -5,7 +5,9 @@ export interface PluginMentionItem {
   char: string
   htmlClass: string
   allowSpaces: boolean
-  getListItem: ({ query }: { query: string }) => string[]
+  getListItem: ({ query }: {
+    query: string
+  }) => Array<{ title: string } & Record<string, unknown>>
   onSelectItem: ({ item, addMention, editor }: {
     item: string
     setContext: (context: Context) => void
