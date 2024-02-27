@@ -83,11 +83,21 @@ export declare class MoonPlugin {
      *
      * This will be called on output
      */
-    integration: undefined | ((props: {
-        html: string;
-        markdown: string;
-        context: Context;
-    }) => Promise<boolean>);
+    integration: undefined | {
+        callback: ((props: {
+            html: string;
+            markdown: string;
+            context: Context;
+        }) => Promise<boolean>);
+        /**
+         * The shortcut to save to all integration is by default ⌘↩︎, you can set a specif shortcut for this one
+         */
+        shortcut?: string;
+        /**
+         * If set, a button icon will be shown to trigger integration callback
+         */
+        buttonIconUrl?: string;
+    };
     /**
      * If you want to add a new context, you can add it here
      *

@@ -15,6 +15,7 @@ export interface PluginMentionItem {
         setContext: (context: Context) => void;
         context: Context;
         addMention: (text: string) => void;
+        deleteMentionPlaceholder: () => void;
         editor: {
             commands: {
                 setContent: (content: string) => boolean;
