@@ -47,8 +47,7 @@ export interface PluginManagerCredentials {
   description?: string
   fromPath?: boolean // use installFromPath
   devMode?: boolean // use to auto refresh when developing a plugin
-  npmRegistryUrl: string
-  npmRegistryConfig: NpmRegistryConfig
+  isMoonPrivate?: boolean;
 }
 
 export type PluginsManages = PluginManagerCredentials[]

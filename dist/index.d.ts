@@ -37,8 +37,7 @@ export interface PluginManagerCredentials {
     description?: string;
     fromPath?: boolean;
     devMode?: boolean;
-    npmRegistryUrl: string;
-    npmRegistryConfig: NpmRegistryConfig;
+    isMoonPrivate?: boolean;
 }
 export type PluginsManages = PluginManagerCredentials[];
 export declare class MoonPlugin {
