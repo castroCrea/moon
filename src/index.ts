@@ -47,7 +47,7 @@ export interface PluginManagerCredentials {
   description?: string
   fromPath?: boolean // use installFromPath
   devMode?: boolean // use to auto refresh when developing a plugin
-  isMoonPrivate?: boolean;
+  isMoonPrivate?: boolean
 }
 
 export type PluginsManages = PluginManagerCredentials[]
