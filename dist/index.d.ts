@@ -91,8 +91,8 @@ export declare class MoonPlugin {
         }) => Promise<boolean>);
         /**
          * The shortcut to save to all integration is by default ⌘↩︎, you can set a specif shortcut for this one
+         * @deprecated to hard to put in place and to understand
          */
-        shortcut?: string;
         /**
          * If set, a button icon will be shown to trigger integration callback
          */

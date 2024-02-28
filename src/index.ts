@@ -113,8 +113,9 @@ export class MoonPlugin {
     }) => Promise<boolean>)
     /**
      * The shortcut to save to all integration is by default ⌘↩︎, you can set a specif shortcut for this one
+     * @deprecated to hard to put in place and to understand
      */
-    shortcut?: string
+    // shortcut?: (e: KeyboardEvent) => boolean
     /**
      * If set, a button icon will be shown to trigger integration callback
      */
