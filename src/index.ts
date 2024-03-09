@@ -137,4 +137,25 @@ export class MoonPlugin {
    * Add a mention to the text editor and execute a command on action
    */
   mention: undefined | (() => PluginMentionItem[])
+
+  /**
+   * Add an action to the editor (use for AI integration)
+   */
+  insertIntoEditor: undefined | {
+    /**
+     * The shortcut to trigger the functionality is by default ⌥↩︎, you can set a specif shortcut for this one
+     * Ex: e.altKey && e.key === 'Enter'
+     */
+    shortcut?: (e: KeyboardEvent) => boolean
+    callback: (props: {
+      editorContent: string
+      context: Context
+    }) => string
+    options: {
+      /** By default, it’s restoring the cursor position (and text selection). Pass a position to move the cursor to. */
+      insertAt: 'start' | 'end' | 'all' | number | boolean | null
+      /** Defines whether to scroll to the cursor when focusing. Defaults to true. */
+      scrollIntoView: boolean
+    }
+  }
 }
