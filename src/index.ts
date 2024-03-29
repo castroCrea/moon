@@ -8,6 +8,7 @@ export * from './FetchContext.type'
 export * from './Fn.type'
 export * from './params'
 export * from './types'
+export * from './editor.type'
 
 export type PluginSettingsDescription = Record<string, {
   type: 'string' | 'path' | 'boolean' | 'number'
