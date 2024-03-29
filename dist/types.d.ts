@@ -1,4 +1,5 @@
 import { type Context } from './FetchContext.type';
+import { type ParseOptions, type Content } from './editor.type';
 export type MentionItem = {
     title: string;
 } & Record<string, unknown>;
@@ -19,6 +20,10 @@ export interface PluginMentionItem {
         editor: {
             commands: {
                 setContent: (content: string) => boolean;
+                insertContent: (value: Content, options?: {
+                    parseOptions?: ParseOptions;
+                    updateSelection?: boolean;
+                }) => void;
             };
         };
     }) => void;

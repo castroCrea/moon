@@ -21,6 +21,7 @@ __exportStar(require("./FetchContext.type"), exports);
 __exportStar(require("./Fn.type"), exports);
 __exportStar(require("./params"), exports);
 __exportStar(require("./types"), exports);
+__exportStar(require("./editor.type"), exports);
 class MoonPlugin {
     /**
      * constructor - Create a new instance of the plugin
