@@ -38,6 +38,7 @@ export interface PluginManagerCredentials {
     description?: string;
     fromPath?: boolean;
     devMode?: boolean;
+    status?: 'activated' | 'deactivated';
     isMoonPrivate?: boolean;
 }
 export type PluginsManages = PluginManagerCredentials[];
