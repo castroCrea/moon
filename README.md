@@ -1,33 +1,21 @@
-# Doc
+# Moon Jot
 
-```bash
-npm pub 
-// or 
-npm run build
-npm publish
-```
+Revolutionize your note-taking workflow with Moon Jot: an intelligent launcher that combines fast typing with AI-driven context capture, customizable plugins, and seamless integration like Notion, Obsidian, ... - all designed to boost productivity and creativity!
 
-# Develop on Moon
+## Concept 
 
-Add this with the path to your plugins
-```json
-{
-  "id": 40,
-  "packageName": "PATH_TP_YOUR_PLUGINS/moon-notion-plugin",
-  "description": "Notion app",
-  "fromPath": true, 
-  "devMode": true, 
-  "npmRegistryUrl": "https://npm.pkg.github.com",
-  "npmRegistryConfig": {
-    "auth": {
-      "token": "GITHUB_TOKEN_IF_DEV_PRIVATE"
-    }
-  }
-}
-```
+Moon Jot is revolutionizing note-taking by offering users access to an intelligent launcher through a simple universal shortcut. 
 
-Run `yarn watch` in your plugin root, it will be auto build.
-Open the settings to update the plugin
-Then open the launcher to test it
-You can also check the logs if you use them here
-Use moon.log in `/Users/paolocastro/Library/Application Support/test-paolo-2/moon.log`
+This launcher provides a fluid and customizable text editor, enabling fast and efficient typing. But that's not all: thanks to our API integration via customizable plugins, notes can be instantly sent to tools like Notion or Obsidian. 
+
+Moon Jot stands out by its ability to capture the user's context, providing relevant information such as document titles and authors, or even details from social media platforms like Twitter and LinkedIn. 
+
+Currently available on Mac OS X, our solution is designed to adapt to every workflow through customizable plugins. Moreover, our integrated artificial intelligence allow you a way more customizable prompt interaction than any GPT on the market, thus enhancing the productivity and creativity of our users. 
+
+Moon Jot offers an unparalleled note-taking experience, combining ease of use with advanced features and extensive customization. Join us in reinventing how we capture and utilize information in our daily lives.
+
+## Videos
+
+## Documentation
+
+[Plugin Development]('./doc/Plugin_Development.md)
