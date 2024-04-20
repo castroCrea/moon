@@ -30,8 +30,8 @@ Use moon.log in `/Users/paolocastro/Library/Application Support/test-paolo-2/moo
 ## Useful commands
 
 ```bash
-npm pub 
+yarn pub 
 // or 
-npm run build
-npm publish
+yarn run build
+yarn publish
 ```

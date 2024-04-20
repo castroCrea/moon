@@ -15,8 +15,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MoonPlugin = void 0;
-// import type fs from 'fs'
-// import type path from 'path'
 __exportStar(require("./FetchContext.type"), exports);
 __exportStar(require("./Fn.type"), exports);
 __exportStar(require("./params"), exports);
