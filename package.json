@@ -1,0 +1,38 @@
+{
+  "name": "@castrocrea/moon",
+  "version": "0.1.55",
+  "description": "Moon basic package",
+  "main": "./dist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castroCrea/moon"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "pub": "yarn build && yarn publish",
+    "build": "tsc",
+    "prebuild": "rm -rf dist",
+    "lint": "eslint . --ext .ts --fix"
+  },
+  "keywords": [
+    "keyword1",
+    "keyword2"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "*"
+  },
+  "publishConfig": {
+    "@castrocrea:registry": "https://npm.pkg.github.com"
+  }
+}
