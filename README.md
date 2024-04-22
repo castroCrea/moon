@@ -1,5 +1,8 @@
 # Moon Jot
 
+<span class="badge-npmversion"><a href="https://npmjs.org/package/@moonjot/moon" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@moonjot/moon.svg" alt="NPM version" /></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/@moonjot/moon" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/@moonjot/moon.svg" alt="NPM downloads" /></a></span>
+
 [Release](https://github.com/castroCrea/moon/releases)
 
 Revolutionize your note-taking workflow with Moon Jot: an intelligent launcher that combines fast typing with AI-driven context capture, customizable plugins, and seamless integration like Notion, Obsidian, ... - all designed to boost productivity and creativity!
