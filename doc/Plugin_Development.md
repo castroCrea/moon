@@ -8,14 +8,15 @@ Add this with the path to your plugins
 ```json
 {
   "id": 40,
-  "packageName": "PATH_TP_YOUR_PLUGINS/moon-notion-plugin",
-  "description": "Notion app",
-  "fromPath": true, 
-  "devMode": true, 
-  "npmRegistryUrl": "https://npm.pkg.github.com",
+  "name": "Name of the app",
+	"packageName": "{PATH_TO}/moon-sample-plugin", // path to the plugin
+	"description": "Sample app",
+	"fromPath": true, // if you packages name is develop locally
+	"devMode": true, // allow auto refresh before each use
+  "npmRegistryUrl": "https://npm.pkg.github.com", // if you use GITHUB as registry (otherwise you can remove that if npm)
   "npmRegistryConfig": {
     "auth": {
-      "token": "GITHUB_TOKEN_IF_DEV_PRIVATE"
+      "token": "GITHUB_TOKEN_IF_DEV_PRIVATE" // if GITHUB is the registry
     }
   }
 }
@@ -25,7 +26,7 @@ Run `yarn watch` in your plugin root, it will be auto build.
 Open the settings to update the plugin
 Then open the launcher to test it
 You can also check the logs if you use them here
-Use moon.log in `/Users/paolocastro/Library/Application Support/test-paolo-2/moon.log`
+Use moon.log in `/Users/{USER_NAME}/Library/Application Support/moon.jot/moon.log`
 
 ## Useful commands
 
