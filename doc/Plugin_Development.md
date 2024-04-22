@@ -4,7 +4,7 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
 
 # Develop on Moon
 
-Add this with the path to your plugins
+Add this with the path to your plugins to `/Users/{USER_NAME}/Library/Application Support/moon.jot/moon-settings.json` in the you `settings.plugins.list` array
 ```json
 {
   "id": 40,
