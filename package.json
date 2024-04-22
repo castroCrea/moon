@@ -15,8 +15,8 @@
     "lint": "eslint . --ext .ts --fix"
   },
   "keywords": [
-    "keyword1",
-    "keyword2"
+    "Moon jot",
+    "plugin system"
   ],
   "license": "MIT",
   "files": [
