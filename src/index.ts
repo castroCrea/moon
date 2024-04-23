@@ -1,6 +1,6 @@
 import { type Context } from './FetchContext.type'
 import { type HtmlToMarkdown } from './Fn.type'
-import { type PluginMentionItem } from './types'
+import { DoNotificationWindowProps, type PluginMentionItem } from './types'
 
 export * from './FetchContext.type'
 export * from './Fn.type'
@@ -62,6 +62,7 @@ export interface EndpointCallbackItem {
    */
   callback: ((props: {
     url: string
+    doNotification: (DoNotificationWindowProps: DoNotificationWindowProps) => void
     saveSettings: (props: { key: string, value: string }) => void
   }) => void)
 }
