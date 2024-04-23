@@ -62,6 +62,7 @@ export interface EndpointCallbackItem {
    */
   callback: ((props: {
     url: string
+    saveSettings: (props: { key: string, value: string }) => void
   }) => void)
 }
 
