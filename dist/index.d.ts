@@ -43,6 +43,18 @@ export interface PluginManagerCredentials {
     status?: 'activated' | 'deactivated';
     isMoonPrivate?: boolean;
 }
+export interface EndpointCallbackItem {
+    /**
+     * Url that will trigger the callback
+     */
+    endpoint: string;
+    /**
+     * Callback that will be executed when then endpoint will be called
+     */
+    callback: ((props: {
+        url: string;
+    }) => void);
+}
 export type PluginsManages = PluginManagerCredentials[];
 export declare class MoonPlugin {
     /**
@@ -118,23 +130,13 @@ export declare class MoonPlugin {
      */
     mention: undefined | (() => PluginMentionItem[]);
     /**
-     * Add an action to the editor (use for AI integration)
+     * If you want to trigger an action from moonjot:// protocol
      */
-    insertIntoEditor: undefined | {
+    endpointCallback: undefined | {
+        callback: EndpointCallbackItem[];
         /**
-         * The shortcut to trigger the functionality is by default ⌥↩︎, you can set a specif shortcut for this one
-         * Ex: e.altKey && e.key === 'Enter'
+         * Url that will trigger the callback
          */
-        shortcut?: (e: KeyboardEvent) => boolean;
-        callback: (props: {
-            editorContent: string;
-            context: Context;
-        }) => string;
-        options: {
-            /** By default, it’s restoring the cursor position (and text selection). Pass a position to move the cursor to. */
-            insertAt: 'start' | 'end' | 'all' | number | boolean | null;
-            /** Defines whether to scroll to the cursor when focusing. Defaults to true. */
-            scrollIntoView: boolean;
-        };
+        endpoint: string;
     };
 }
