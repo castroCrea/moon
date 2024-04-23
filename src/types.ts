@@ -30,3 +30,9 @@ export interface PluginMentionItem {
     }
   }) => void
 }
+
+export interface DoNotificationWindowProps {
+  body: string
+  url?: string
+  width?: number
+};
