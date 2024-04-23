@@ -132,11 +132,5 @@ export declare class MoonPlugin {
     /**
      * If you want to trigger an action from moonjot:// protocol
      */
-    endpointCallback: undefined | {
-        callback: EndpointCallbackItem[];
-        /**
-         * Url that will trigger the callback
-         */
-        endpoint: string;
-    };
+    endpointCallbacks: undefined | EndpointCallbackItem[];
 }
