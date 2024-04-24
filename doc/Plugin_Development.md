@@ -72,3 +72,8 @@ yarn pub
 yarn lint
 ```
 
+## Videos
+
+🙋 Check YouTube **Permissions** videos: https://www.youtube.com/playlist?list=PLmTKOO83vuwX7rit8WLxlnAbfIYy2aAwU
+
+✨ Check YouTube **Features** videos: https://www.youtube.com/playlist?list=PLmTKOO83vuwVnQbCVjCuxUrfyaiLPgmvn
