@@ -1,17 +1,24 @@
 import { type Context } from './FetchContext.type';
 import { type HtmlToMarkdown } from './Fn.type';
-import { DoNotificationWindowProps, type PluginMentionItem } from './types';
+import { type DoNotificationWindowProps, type PluginMentionItem } from './types';
 export * from './FetchContext.type';
 export * from './Fn.type';
 export * from './params';
 export * from './types';
 export * from './editor.type';
-export type PluginSettingsDescription = Record<string, {
+export interface PluginSettingsInput {
     type: 'string' | 'path' | 'boolean' | 'number';
     required: boolean;
     label: string;
     description: string;
-}>;
+}
+export interface PluginSettingsButton {
+    type: 'button';
+    callback: boolean;
+    label: string;
+    description: string;
+}
+export type PluginSettingsDescription = Record<string, PluginSettingsInput | PluginSettingsButton>;
 export type MoonPluginSettings = Record<string, string>;
 export interface PluginHelpers {
     moonLog: (log: string) => void;
