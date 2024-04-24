@@ -22,6 +22,15 @@ __exportStar(require("./types"), exports);
 __exportStar(require("./editor.type"), exports);
 class MoonPlugin {
     /**
+     * If you want to add a call to action as a button inside the settings (ex: Auth open url)
+     */
+    get settingsButtons() {
+        return this._settingsButtons.map(button => ({ ...button, callback: button.callback.toString() }));
+    }
+    set settingsButtons(value) {
+        this._settingsButtons = value;
+    }
+    /**
      * constructor - Create a new instance of the plugin
      *
      * @param settings - The settings of the plugin
@@ -53,6 +62,7 @@ class MoonPlugin {
          * settings - The settings of the plugin
          */
         this.settings = {};
+        this._settingsButtons = [];
         if (props == null)
             return;
         if (props.settings)

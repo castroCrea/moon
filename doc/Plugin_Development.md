@@ -7,7 +7,7 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
 Add this with the path to your plugins to `/Users/{USER_NAME}/Library/Application Support/moon.jot/moon-settings.json` in the you `settings.plugins.list` array
 ```json
 {
-  "id": 40,
+  "id": 1000000000, // uniq id all over that app (to get in the store, Moon jot will automatically give you one)
   "name": "Name of the app",
 	"packageName": "{PATH_TO}/moon-sample-plugin", // path to the plugin
 	"description": "Sample app",
@@ -19,6 +19,16 @@ Add this with the path to your plugins to `/Users/{USER_NAME}/Library/Applicatio
       "token": "GITHUB_TOKEN_IF_DEV_PRIVATE" // if GITHUB is the registry
     }
   }
+}
+
+// for copy past
+{
+  "id": 1000000000,
+  "name": "Name of the app",
+	"packageName": "{PATH_TO}/moon-sample-plugin",
+	"description": "Sample app",
+	"fromPath": true,
+	"devMode": true
 }
 ```
 

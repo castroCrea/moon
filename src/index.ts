@@ -21,8 +21,14 @@ export interface PluginSettingsButton {
   label: string
   description: string
 }
+export interface GetPluginSettingsButton {
+  type: 'button'
+  callback: string
+  label: string
+  description: string
+}
 
-export type PluginSettingsDescription = Record<string, PluginSettingsInput | PluginSettingsButton>
+export type PluginSettingsDescription = Record<string, PluginSettingsInput>
 
 export type MoonPluginSettings = Record<string, string>
 
@@ -113,6 +119,19 @@ export class MoonPlugin {
    * All helpers you need to build your plugin
    */
   helpers: PluginHelpers | undefined
+
+  private _settingsButtons: PluginSettingsButton[] = []
+
+  /**
+   * If you want to add a call to action as a button inside the settings (ex: Auth open url)
+   */
+  get settingsButtons (): GetPluginSettingsButton[] {
+    return this._settingsButtons.map(button => ({ ...button, callback: button.callback.toString() }))
+  }
+
+  set settingsButtons (value: PluginSettingsButton[]) {
+    this._settingsButtons = value
+  }
 
   /**
    * constructor - Create a new instance of the plugin
