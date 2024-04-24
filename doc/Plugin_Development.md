@@ -12,22 +12,24 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
 ## Continue with Live development
 
 5. Go to Moon Jot `Menu > Development > Open Settings File`
-  <img scr="./image.png" width='100px' />
+  <img src="./image.png" width='300px' style='margin:auto; display: block' />
 
 6. In there in the `settings.plugins.list` array add the following code 
-  ```json
-  {
-    "id": 1000000000,
-    "name": "Name of the app",
-    "packageName": "{PATH_TO_PLUGIN_ROOT }",
-    "description": "Sample app",
-    "fromPath": true,
-    "devMode": true
-  }
-  ```
-  [More explanation bellow](#plugin-settings-explanation)
+    ```json
+    {
+      "id": 1000000000,
+      "name": "Name of the app",
+      "packageName": "{PATH_TO_PLUGIN_ROOT }",
+      "description": "Sample app",
+      "fromPath": true,
+      "devMode": true
+    }
+    ```
+    [More explanation bellow](#plugin-settings-explanation)
+
 7. Activate dev mode in Moon Jot. Go to `Menu > Settings > Enable Dev Mode`
-  <img scr="./image-1.png" width='100px' />
+
+  <img src="./image-1.png" width='500px' style='margin:auto; display: block'/>
 
 8. Go back on your plugin and start building on every change `yarn watch`
 9. You are good to go.
@@ -35,14 +37,6 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
 🚨 It can be possible that you need to reopen settings to see plugins changes. (I'm working on improving that).
 🚨 When adding to the settings a plugin, it can be possible that on new plugin installation, you need to restart the Moon Jot to see it in the plugin.
 
-## Useful commands
-
-```bash
-yarn pub 
-// or 
-yarn run build
-yarn publish
-```
 
 ## Plugin settings explanation
 Add this with the path to your plugins to `/Users/{USER_NAME}/Library/Application Support/moon.jot/moon-settings.json` in the you `settings.plugins.list` array
@@ -61,3 +55,18 @@ Add this with the path to your plugins to `/Users/{USER_NAME}/Library/Applicatio
     }
   }
 }
+```
+
+## Useful commands
+
+```bash
+// Watch change and build on every file change (development user)
+yarn watch
+
+// Build and Publish to npm
+yarn pub
+
+// Trigger linter
+yarn lint
+```
+
