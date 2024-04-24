@@ -12,7 +12,9 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
 ## Continue with Live development
 
 5. Go to Moon Jot `Menu > Development > Open Settings File`
-  <img src="./image.png" width='300px' style='margin:auto; display: block' />
+  <p align="center">
+    <img src="./image.png" width='300px' style='margin:auto; display: block' />
+  </p>
 
 6. In there in the `settings.plugins.list` array add the following code 
     ```json
@@ -28,9 +30,9 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
     [More explanation bellow](#plugin-settings-explanation)
 
 7. Activate dev mode in Moon Jot. Go to `Menu > Settings > Enable Dev Mode`
-
-  <img src="./image-1.png" width='500px' style='margin:auto; display: block'/>
-
+  <p align="center">
+    <img src="./image-1.png" width='500px' style='margin:auto; display: block'/>
+  </p>
 8. Go back on your plugin and start building on every change `yarn watch`
 9. You are good to go.
 
