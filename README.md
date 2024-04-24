@@ -7,6 +7,10 @@
 
 Revolutionize your note-taking workflow with Moon Jot: an intelligent launcher that combines fast typing with AI-driven context capture, customizable plugins, and seamless integration like Notion, Obsidian, ... - all designed to boost productivity and creativity!
 
+## Documentation
+
+[Plugin Development](./doc/Plugin_Development.md)
+
 ## Concept 
 
 Moon Jot is revolutionizing note-taking by offering users access to an intelligent launcher through a simple universal shortcut. 
@@ -26,6 +30,4 @@ Moon Jot offers an unparalleled note-taking experience, combining ease of use wi
 
 ## Videos
 
-## Documentation
-
-[Plugin Development](./doc/Plugin_Development.md)
+Check YouTube videos https://www.youtube.com/playlist?list=PLmTKOO83vuwVnQbCVjCuxUrfyaiLPgmvn
