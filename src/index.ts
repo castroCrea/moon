@@ -17,7 +17,7 @@ export interface PluginSettingsInput {
 
 export interface PluginSettingsButton {
   type: 'button'
-  callback: boolean
+  callback: () => void
   label: string
   description: string
 }
