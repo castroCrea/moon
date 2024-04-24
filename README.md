@@ -30,4 +30,6 @@ Moon Jot offers an unparalleled note-taking experience, combining ease of use wi
 
 ## Videos
 
-Check YouTube videos https://www.youtube.com/playlist?list=PLmTKOO83vuwVnQbCVjCuxUrfyaiLPgmvn
+🙋 Check YouTube **Permissions** videos: https://www.youtube.com/playlist?list=PLmTKOO83vuwX7rit8WLxlnAbfIYy2aAwU
+
+✨ Check YouTube **Features** videos: https://www.youtube.com/playlist?list=PLmTKOO83vuwVnQbCVjCuxUrfyaiLPgmvn
