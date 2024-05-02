@@ -11,6 +11,8 @@ Revolutionize your note-taking workflow with Moon Jot: an intelligent launcher t
 
 [Plugin Development](./doc/Plugin_Development.md)
 
+Check also the tutorial video https://youtu.be/dvoalnWBwv4
+
 ## Concept 
 
 Moon Jot is revolutionizing note-taking by offering users access to an intelligent launcher through a simple universal shortcut. 

@@ -2,6 +2,8 @@
 
 Moon Jot is base on a plugin system that make easy to develop your own integration and workflows
 
+Check also the tutorial video https://youtu.be/dvoalnWBwv4
+
 # Develop on Moon
 
 1. Clone or Fork repo [https://github.com/castroCrea/moon-sample-plugin](https://github.com/castroCrea/moon-sample-plugin)
