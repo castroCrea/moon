@@ -42,6 +42,7 @@ class MoonPlugin {
         this.name = 'Plugin name';
         /**
          * logo - The logo of the plugin
+         * Can be a URL or an svg string starting by <svg
          */
         this.logo = 'https://www.image.so/images/favicon.ico';
         /**

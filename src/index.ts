@@ -92,6 +92,7 @@ export class MoonPlugin {
 
   /**
    * logo - The logo of the plugin
+   * Can be a URL or an svg string starting by <svg
    */
   logo: string = 'https://www.image.so/images/favicon.ico'
 
@@ -155,11 +156,6 @@ export class MoonPlugin {
       markdown: string
       context: Context
     }) => Promise<boolean>)
-    /**
-     * The shortcut to save to all integration is by default ⌘↩︎, you can set a specif shortcut for this one
-     * @deprecated to hard to put in place and to understand
-     */
-    shortcut?: (e: KeyboardEvent) => boolean
     /**
      * If set, a button icon will be shown to trigger integration callback
      */
