@@ -65,6 +65,7 @@ export interface PluginManagerCredentials {
   devMode?: boolean // use to auto refresh when developing a plugin
   status?: 'activated' | 'deactivated'
   isMoonPrivate?: boolean
+  link?: string
 }
 
 export interface EndpointCallbackItem {
