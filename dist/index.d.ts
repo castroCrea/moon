@@ -6,12 +6,25 @@ export * from './Fn.type';
 export * from './params';
 export * from './types';
 export * from './editor.type';
-export interface PluginSettingsInput {
-    type: 'string' | 'path' | 'boolean' | 'number' | 'file' | 'text';
+export type PluginSettingsInput = {
+    type: 'number';
     required: boolean;
     label: string;
     description: string;
-}
+    default?: number;
+} | {
+    type: 'string' | 'path' | 'file' | 'text';
+    required: boolean;
+    label: string;
+    description: string;
+    default?: string;
+} | {
+    type: 'boolean';
+    required: boolean;
+    label: string;
+    description: string;
+    default?: boolean;
+};
 export interface PluginSettingsButton {
     type: 'button';
     callback: () => void;
