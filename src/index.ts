@@ -9,7 +9,7 @@ export * from './types'
 export * from './editor.type'
 
 export interface PluginSettingsInput {
-  type: 'string' | 'path' | 'boolean' | 'number' | 'file'
+  type: 'string' | 'path' | 'boolean' | 'number' | 'file' | 'text'
   required: boolean
   label: string
   description: string
