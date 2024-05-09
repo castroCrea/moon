@@ -4,6 +4,8 @@ Moon Jot is base on a plugin system that make easy to develop your own integrati
 
 Check also the tutorial video https://youtu.be/dvoalnWBwv4
 
+👋 Here a utils library to build Moon Kot plugin https://github.com/castroCrea/moon-utils
+
 # Develop on Moon
 
 1. Clone or Fork repo [https://github.com/castroCrea/moon-sample-plugin](https://github.com/castroCrea/moon-sample-plugin)
