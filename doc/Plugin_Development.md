@@ -8,7 +8,7 @@ Check also the tutorial video https://youtu.be/dvoalnWBwv4
 
 # Develop on Moon
 
-1. Clone or Fork repo [https://github.com/castroCrea/moon-sample-plugin](https://github.com/castroCrea/moon-sample-plugin)
+1. Clone or Fork repo [https://github.com/castroCrea/moon-sample-plugin](https://github.com/castroCrea/moon-sample-plugin) `git clone https://github.com/castroCrea/moon-sample-plugin.git moon-name-of-your-plugin`
 2. Install repo with `yarn` 
 3. Modify plugin name on `package.json`
 4. You are ready to develop (Note that everything is typed with typescript)
