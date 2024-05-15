@@ -1,6 +1,6 @@
 {
   "name": "@moonjot/moon",
-  "version": "0.1.74",
+  "version": "0.1.75",
   "description": "Moon basic package",
   "main": "./dist",
   "repository": {
