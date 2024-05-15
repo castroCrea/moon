@@ -31,7 +31,7 @@ export type PluginSettingsInput = {
   required: boolean
   label: string
   description: string
-  default?: boolean
+  default?: string
 }
 
 export interface PluginSettingsButton {
