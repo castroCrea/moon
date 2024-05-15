@@ -28,6 +28,23 @@ export interface PluginMentionItem {
         };
     }) => void;
 }
+/**
+ * Not implemented yet
+ */
+export interface shortcutAction {
+    shortcut: string;
+    callback: (props: {
+        html: string;
+        markdown: string;
+        context: Context;
+        setContext: (context: Context) => void;
+        setContent: (content: string) => boolean;
+        insertContent: (value: Content, options?: {
+            parseOptions?: ParseOptions;
+            updateSelection?: boolean;
+        }) => void;
+    }) => void;
+}
 export interface DoNotificationWindowProps {
     body: string;
     url?: string;

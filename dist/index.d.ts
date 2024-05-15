@@ -1,6 +1,6 @@
 import { type Context } from './FetchContext.type';
 import { type HtmlToMarkdown } from './Fn.type';
-import { type DoNotificationWindowProps, type PluginMentionItem } from './types';
+import { type shortcutAction, type DoNotificationWindowProps, type PluginMentionItem } from './types';
 export * from './FetchContext.type';
 export * from './Fn.type';
 export * from './params';
@@ -20,6 +20,12 @@ export type PluginSettingsInput = {
     default?: string;
 } | {
     type: 'boolean';
+    required: boolean;
+    label: string;
+    description: string;
+    default?: boolean;
+} | {
+    type: 'shortcut';
     required: boolean;
     label: string;
     description: string;
@@ -163,6 +169,10 @@ export declare class MoonPlugin {
      * Add a mention to the text editor and execute a command on action
      */
     mention: undefined | (() => PluginMentionItem[]);
+    /**
+     * Not implemented yet
+     */
+    shortcutActions: undefined | shortcutAction[];
     /**
      * If you want to trigger an action from moonjot:// protocol
      */
