@@ -148,7 +148,9 @@ export declare class MoonPlugin {
             html: string;
             markdown: string;
             context: Context;
-        }) => Promise<boolean>);
+        }) => Promise<boolean | {
+            url: string;
+        }>);
         /**
          * If set, a button icon will be shown to trigger integration callback
          */
