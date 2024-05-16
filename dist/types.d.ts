@@ -10,7 +10,7 @@ export interface PluginMentionItem {
     allowSpaces: boolean;
     getListItem: ({ query }: {
         query: string;
-    }) => MentionItem[];
+    }) => Promise<MentionItem[]>;
     onSelectItem: (props: {
         item: MentionItem;
         setContext: (context: Context) => void;
