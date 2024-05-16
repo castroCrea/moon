@@ -75,6 +75,7 @@ export interface PluginManagerCredentials {
     status?: 'activated' | 'deactivated';
     isMoonPrivate?: boolean;
     link?: string;
+    icon?: string;
 }
 export interface EndpointCallbackItem {
     /**
