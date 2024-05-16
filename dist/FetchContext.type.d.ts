@@ -104,6 +104,7 @@ export interface Context {
     isFinished?: boolean;
     error?: string;
     clipContent?: boolean;
+    pluginPlayground: Record<string, any>;
 }
 export interface Topics {
     subject: string[];
