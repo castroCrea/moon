@@ -2,6 +2,9 @@ import { type Context } from './FetchContext.type';
 import { type ParseOptions, type Content } from './editor.type';
 export type MentionItem = {
     title: string;
+    pluginName?: string;
+    color?: string;
+    background?: string;
 } & Record<string, unknown>;
 export interface PluginMentionItem {
     name: string;
