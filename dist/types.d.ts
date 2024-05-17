@@ -11,6 +11,7 @@ export interface PluginMentionItem {
     char: string;
     htmlClass: string;
     allowSpaces: boolean;
+    startOfLine?: boolean;
     getListItem: ({ query }: {
         query: string;
     }) => Promise<MentionItem[]>;
