@@ -102,6 +102,7 @@ export interface Context {
   }
   isFinished?: boolean
   error?: string
+  loader?: boolean
   clipContent?: boolean
   pluginPlayground?: Record<string, any>
 }

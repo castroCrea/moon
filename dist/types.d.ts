@@ -22,6 +22,11 @@ export interface PluginMentionItem {
         addMention: (text: string) => void;
         deleteMentionPlaceholder: () => void;
         editor: {
+            storage: {
+                markdown: {
+                    getMarkdown: () => string;
+                };
+            };
             commands: {
                 setContent: (content: string) => boolean;
                 insertContent: (value: Content, options?: {
