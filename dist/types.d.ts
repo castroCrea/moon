@@ -9,8 +9,8 @@ export type MentionItem = {
 export interface PluginMentionItem {
     name: string;
     char: string;
-    shortcut?: string;
     htmlClass: string;
+    shortcut?: string;
     allowSpaces: boolean;
     startOfLine?: boolean;
     getListItem: ({ query }: {

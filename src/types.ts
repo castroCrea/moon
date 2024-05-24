@@ -12,6 +12,7 @@ export interface PluginMentionItem {
   name: string
   char: string
   htmlClass: string
+  shortcut?: string
   allowSpaces: boolean
   startOfLine?: boolean
   getListItem: ({ query }: {
