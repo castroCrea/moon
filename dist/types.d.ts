@@ -35,6 +35,19 @@ export interface PluginMentionItem {
                 }) => void;
             };
         };
+        utils: {
+            handleReplacingProperties: ({ content, searchObj }: {
+                content?: string;
+                searchObj: Record<string, any>;
+            }) => string | undefined;
+            handleConditions: ({ content, searchObj }: {
+                content?: string;
+                searchObj: Record<string, any>;
+            }) => string | undefined;
+            turnDate: ({ content }: {
+                content: string;
+            }) => string;
+        };
     }) => void;
 }
 /**
