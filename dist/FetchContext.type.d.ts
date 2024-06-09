@@ -22,6 +22,12 @@ export type SOURCE_TYPE_THAT_CLIP = [
     'Newsletter',
     'Mail'
 ];
+export interface PluginPlaygroundItem {
+    value: any;
+    /** @returns html */
+    render?: (value: any) => string;
+}
+export type ParentPluginPlaygroundItem = Record<string, PluginPlaygroundItem>;
 /**
  * Create:
  *  - [[Note]]:
@@ -105,7 +111,7 @@ export interface Context {
     error?: string;
     loader?: boolean;
     clipContent?: boolean;
-    pluginPlayground?: Record<string, any>;
+    pluginPlayground?: Record<string, ParentPluginPlaygroundItem>;
 }
 export interface Topics {
     subject: string[];
