@@ -28,7 +28,7 @@ export interface PluginPlaygroundItem {
     render: Array<{
         background?: string;
         color?: string;
-        name?: string;
+        title?: string;
     }>;
 }
 export type ParentPluginPlaygroundItem = Record<string, PluginPlaygroundItem>;
