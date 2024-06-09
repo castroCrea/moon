@@ -23,9 +23,13 @@ export type SOURCE_TYPE_THAT_CLIP = [
     'Mail'
 ];
 export interface PluginPlaygroundItem {
-    value: any;
+    value: string[];
     /** @returns html */
-    render?: (value: any) => string;
+    render: Array<{
+        background?: string;
+        color?: string;
+        name?: string;
+    }>;
 }
 export type ParentPluginPlaygroundItem = Record<string, PluginPlaygroundItem>;
 /**
