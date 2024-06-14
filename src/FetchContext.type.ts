@@ -27,7 +27,16 @@ export type SOURCE_TYPE_THAT_CLIP = [
 export interface PluginPlaygroundItem {
   value: string[]
   /** @returns html */
-  render: Array<{ background?: string, color?: string, title?: string }>
+  render: Array<{
+    background?: string
+    color?: string
+    title?: string
+    logoProps?: {
+    /** svg or url */
+      logo?: string
+      name: string
+    }
+  }>
 }
 export type ParentPluginPlaygroundItem = Record<string, PluginPlaygroundItem>
 

@@ -29,6 +29,11 @@ export interface PluginPlaygroundItem {
         background?: string;
         color?: string;
         title?: string;
+        logoProps?: {
+            /** svg or url */
+            logo?: string;
+            name: string;
+        };
     }>;
 }
 export type ParentPluginPlaygroundItem = Record<string, PluginPlaygroundItem>;
