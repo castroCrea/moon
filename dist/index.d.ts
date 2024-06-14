@@ -29,6 +29,7 @@ export type PluginSettingsInput = {
     required: boolean;
     label: string;
     description: string;
+    /** Cmd, Alt, Ctrl, Shift, Enter. ex: Alt+Enter */
     default?: string;
 };
 export interface PluginSettingsButton {

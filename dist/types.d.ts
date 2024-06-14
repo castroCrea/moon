@@ -5,11 +5,17 @@ export type MentionItem = {
     pluginName?: string;
     color?: string;
     background?: string;
+    logoProps?: {
+        /** svg or url */
+        logo?: string;
+        name: string;
+    };
 } & Record<string, unknown>;
 export interface PluginMentionItem {
     name: string;
     char: string;
     htmlClass: string;
+    /** Cmd, Alt, Ctrl, Shift, Enter. ex: Alt+Enter */
     shortcut?: string;
     allowSpaces: boolean;
     startOfLine?: boolean;
