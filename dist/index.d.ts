@@ -25,6 +25,16 @@ export type PluginSettingsInput = {
     description: string;
     default?: boolean;
 } | {
+    type: 'json';
+    required: boolean;
+    label: string;
+    description: string;
+    dataDescription: Record<string, {
+        title: string;
+        type: 'string' | 'template';
+    }>;
+    default?: Array<Record<string, string>>;
+} | {
     type: 'shortcut';
     required: boolean;
     label: string;
