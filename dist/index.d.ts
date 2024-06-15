@@ -55,7 +55,7 @@ export interface GetPluginSettingsButton {
     description: string;
 }
 export type PluginSettingsDescription = Record<string, PluginSettingsInput>;
-export type MoonPluginSettings = Record<string, string>;
+export type MoonPluginSettings = Record<string, string | Array<Record<string, string>>>;
 export interface PluginHelpers {
     moonLog: (log: string) => void;
     htmlToMarkdown: HtmlToMarkdown;
