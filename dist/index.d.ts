@@ -32,6 +32,7 @@ export type PluginSettingsInput = {
     dataDescription: Array<{
         title: string;
         type: 'string' | 'template';
+        key: string;
     }>;
     default?: Array<Record<string, string>>;
 } | {
