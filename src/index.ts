@@ -60,7 +60,8 @@ export interface GetPluginSettingsButton {
 
 export type PluginSettingsDescription = Record<string, PluginSettingsInput>
 
-export type MoonPluginSettings = Record<string, string | Array<Record<string, string>>>
+export type MoonPluginSettingsValue = string | Array<Record<string, string>>
+export type MoonPluginSettings = Record<string, MoonPluginSettingsValue >
 
 export interface PluginHelpers {
   moonLog: (log: string) => void
@@ -110,7 +111,7 @@ export interface EndpointCallbackItem {
   callback: ((props: {
     url: string
     doNotification: (DoNotificationWindowProps: DoNotificationWindowProps) => void
-    saveSettings: (props: { key: string, value: string }) => void
+    saveSettings: (props: { key: string, value: MoonPluginSettingsValue }) => void
   }) => void)
 }
 
