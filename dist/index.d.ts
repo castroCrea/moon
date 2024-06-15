@@ -6,6 +6,18 @@ export * from './Fn.type';
 export * from './params';
 export * from './types';
 export * from './editor.type';
+export interface PluginSettingsInputJson {
+    type: 'json';
+    required: boolean;
+    label: string;
+    description: string;
+    dataDescription: Array<{
+        title: string;
+        type: 'string' | 'template';
+        key: string;
+    }>;
+    default?: Array<Record<string, string>>;
+}
 export type PluginSettingsInput = {
     type: 'number';
     required: boolean;
@@ -24,18 +36,7 @@ export type PluginSettingsInput = {
     label: string;
     description: string;
     default?: boolean;
-} | {
-    type: 'json';
-    required: boolean;
-    label: string;
-    description: string;
-    dataDescription: Array<{
-        title: string;
-        type: 'string' | 'template';
-        key: string;
-    }>;
-    default?: Array<Record<string, string>>;
-} | {
+} | PluginSettingsInputJson | {
     type: 'shortcut';
     required: boolean;
     label: string;
