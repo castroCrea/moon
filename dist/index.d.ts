@@ -6,16 +6,26 @@ export * from './Fn.type';
 export * from './params';
 export * from './types';
 export * from './editor.type';
+export type PluginSettingsInputJsonDataDescriptionItem = {
+    title: string;
+    type: 'string' | 'template';
+    key: string;
+} | {
+    title: string;
+    type: 'selection';
+    key: string;
+    dataDescription: Array<{
+        title: string;
+        value: string;
+        key: string;
+    }>;
+};
 export interface PluginSettingsInputJson {
     type: 'json';
     required: boolean;
     label: string;
     description: string;
-    dataDescription: Array<{
-        title: string;
-        type: 'string' | 'template' | 'selection';
-        key: string;
-    }>;
+    dataDescription: PluginSettingsInputJsonDataDescriptionItem[];
     default?: Array<Record<string, string>>;
 }
 export interface PluginSettingsInputSelection {
