@@ -18,6 +18,18 @@ export interface PluginSettingsInputJson {
     }>;
     default?: Array<Record<string, string>>;
 }
+export interface PluginSettingsInputSelection {
+    type: 'selection';
+    required: boolean;
+    label: string;
+    description: string;
+    dataDescription: Array<{
+        title: string;
+        value: string;
+        key: string;
+    }>;
+    default?: string;
+}
 export type PluginSettingsInput = {
     type: 'number';
     required: boolean;
@@ -36,14 +48,14 @@ export type PluginSettingsInput = {
     label: string;
     description: string;
     default?: boolean;
-} | PluginSettingsInputJson | {
+} | {
     type: 'shortcut';
     required: boolean;
     label: string;
     description: string;
     /** Cmd, Alt, Ctrl, Shift, Enter. ex: Alt+Enter */
     default?: string;
-};
+} | PluginSettingsInputJson | PluginSettingsInputSelection;
 export interface PluginSettingsButton {
     type: 'button';
     callback: () => void;
