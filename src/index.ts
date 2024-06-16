@@ -14,7 +14,7 @@ export interface PluginSettingsInputJson {
   label: string
   description: string
   dataDescription: Array<
-  { title: string, type: 'string' | 'template', key: string }
+  { title: string, type: 'string' | 'template' | 'selection', key: string }
   >
   default?: Array<Record<string, string>>
 }

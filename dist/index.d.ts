@@ -13,7 +13,7 @@ export interface PluginSettingsInputJson {
     description: string;
     dataDescription: Array<{
         title: string;
-        type: 'string' | 'template';
+        type: 'string' | 'template' | 'selection';
         key: string;
     }>;
     default?: Array<Record<string, string>>;
