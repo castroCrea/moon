@@ -8,7 +8,7 @@ export * from './params'
 export * from './types'
 export * from './editor.type'
 
-export type PluginSettingsInputJsonDataDescriptionItem = { title: string, type: 'string' | 'template', key: string } | { title: string, type: 'selection', key: string, dataDescription: Array<{ title: string, value: string, key: string }> }
+export type PluginSettingsInputJsonDataDescriptionItem = { title: string, type: 'string' | 'template' | 'selection', key: string } | { title: string, type: 'selection', key: string, dataDescription: Array<{ title: string, value: string, key: string }> }
 
 export interface PluginSettingsInputJson {
   type: 'json'
