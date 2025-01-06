@@ -17,6 +17,7 @@ export interface PluginMentionItem {
     htmlClass: string;
     /** Cmd, Alt, Ctrl, Shift, Enter. ex: Alt+Enter */
     shortcut?: string;
+    appendToId?: string;
     allowSpaces: boolean;
     startOfLine?: boolean;
     getListItem: ({ query }: {
